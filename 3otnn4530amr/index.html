@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<title>Video Player</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #F5F5F5;
+    padding: 20px;
+}
+
+.video-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Responsive iframe */
+.video-wrapper iframe {
+    width: 100%;
+    height: 405px;
+    border: none;
+}
+
+/* Overlay iklan */
+.ad-overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+/* Tombol */
+.read-more-btn {
+    margin-top: 20px;
+    padding: 13px 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #000, #333);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.read-more-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .video-wrapper iframe {
+        height: 220px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="video-title">
+    Watch Full Video Below 👇
+</div>
+
+<div class="video-wrapper">
+    <!-- FULLSCREEN DIMATIKAN (tidak pakai allowfullscreen) -->
+<iframe width="600" height="480" src="https://myvidplay.com/e/3otnn4530amr" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+
+</div>
+
+<button class="read-more-btn">
+    Read More
+</button>
+<!-- Histats -->
+<script type="text/javascript">
+var _Hasync = _Hasync || [];
+_Hasync.push(['Histats.start', '1,4992245,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+    var hs = document.createElement('script');
+    hs.type = 'text/javascript';
+    hs.async = true;
+    hs.src = '//s10.histats.com/js15_as.js';
+    document.body.appendChild(hs);
+})();
+</script>
+
+<noscript>
+<img src="//sstatic1.histats.com/0.gif?4992245&101" alt="">
+</noscript>
+
+</body>
+</html>
