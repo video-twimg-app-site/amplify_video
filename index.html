@@ -13,29 +13,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-52TJXM5X');</script>
 <!-- End Google Tag Manager -->
 </head>
-
-<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52TJXM5X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<body>
 <script>
   const destination = "https://beginshello.com/tjcnn7ah8?key=3954a32ca52d1ee27a9735e1908641c4";
 
-  // Kirim event + redirect setelah event terkirim
+  // Kirim event ke GTM
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "adsterra_redirect",
+    destination_url: destination
+  });
+
+  // Kirim event ke GA langsung (opsional, boleh tetap)
   gtag('event', 'redirect_click', {
     event_category: 'redirect',
     event_label: destination,
-    transport_type: 'beacon',
-    event_callback: function () {
-      window.location.href = destination;
-    }
+    transport_type: 'beacon'
   });
 
-  // Fallback jika GA diblokir (WAJIB)
+  // Redirect aman
   setTimeout(() => {
     window.location.href = destination;
-  }, 1200);
+  }, 300);
 </script>
+
 </body>
 </html>
