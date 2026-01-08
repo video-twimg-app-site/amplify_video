@@ -13,16 +13,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-G03NHX4D9G');
-</script>
-<body>
 <script>
   const destination = "https://beginshello.com/tjcnn7ah8?key=3954a32ca52d1ee27a9735e1908641c4";
 
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "adsterra_redirect",
-    destination_url: destination
-  });
+  if (typeof gtag === "function") {
+    gtag('event', 'adsterra_smartlink_click', {
+      destination_url: destination,
+      transport_type: 'beacon'
+    });
+  }
 
   setTimeout(() => {
     window.location.href = destination;
