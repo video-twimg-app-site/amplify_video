@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Loading...</title>
+  <title>Redirecting...</title>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G03NHX4D9G"></script>
@@ -10,48 +10,25 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-G03NHX4D9G', { send_page_view: true });
+    gtag('config', 'G-G03NHX4D9G');
   </script>
-
-  <style>
-    body{
-      margin:0;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-family:Arial,Helvetica,sans-serif;
-      font-size:16px;
-      opacity:.8;
-    }
-  </style>
 </head>
 
 <body>
-  Preparing content… please wait
 
 <script>
   const TARGET_URL =
     "https://beginshello.com/tjcnn7ah8?key=3954a32ca52d1ee27a9735e1908641c4";
 
-  const REDIRECT_DELAY = 2000;
+  // kirim event sekilas (optional)
+  if (typeof gtag === "function") {
+    gtag('event', 'instant_redirect', {
+      event_category: 'adsterra1'
+    });
+  }
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-
-      if (typeof gtag === "function") {
-        gtag('event', 'auto_redirect', {
-          event_category: 'adsterra1',
-          event_label: 'no_interaction',
-          transport_type: 'beacon'
-        });
-      }
-
-      // replace supaya tidak bisa back
-      location.replace(TARGET_URL);
-
-    }, REDIRECT_DELAY);
-  });
+  // redirect LANGSUNG
+  window.location.href = TARGET_URL;
 </script>
 
 </body>
