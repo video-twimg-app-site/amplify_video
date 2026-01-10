@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Loading...</title>
 
-  <!-- Google Analytics 4 -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G03NHX4D9G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,19 +16,26 @@
 
 <body>
 
-<script>
-  const destination = "https://beginshello.com/tjcnn7ah8?key=3954a32ca52d1ee27a9735e1908641c4";
+<p style="font-family:Arial; text-align:center; margin-top:40vh;">
+  Preparing content…
+</p>
 
-  if (typeof gtag === "function") {
-    gtag('event', 'adsterra_smartlink_click', {
-      destination_url: destination,
+<script>
+setTimeout(function () {
+
+  // kirim event ke GA4
+  if (typeof gtag === 'function') {
+    gtag('event', 'auto_redirect_delay', {
+      event_category: 'adsterra',
       transport_type: 'beacon'
     });
   }
 
-  setTimeout(() => {
-    window.location.href = destination;
-  }, 500);
+  // redirect
+  window.location.href =
+    'https://beginshello.com/tjcnn7ah8?key=3954a32ca52d1ee27a9735e1908641c4';
+
+}, 2500); // 2.5 detik
 </script>
 
 </body>
